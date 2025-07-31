@@ -10,7 +10,9 @@ import {
   databaseConfig,
   ethereumConfig,
   jwtConfig,
+  discordConfig,
 } from './config';
+import { DiscordModule } from './discord/discord.module';
 import { SyncModule } from './sync/sync.module';
 import { UsersModule } from './users/users.module';
 
@@ -24,6 +26,7 @@ import { UsersModule } from './users/users.module';
         ethereumConfig,
         contractsConfig,
         jwtConfig,
+        discordConfig,
       ],
     }),
     JwtModule.registerAsync({
@@ -36,6 +39,7 @@ import { UsersModule } from './users/users.module';
     UsersModule,
     SyncModule,
     AuthModule,
+    DiscordModule,
   ],
   controllers: [],
   providers: [],
